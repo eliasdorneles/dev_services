@@ -1,0 +1,6 @@
+path:
+    logs: /data/log
+    data: /data/data
+    plugins: /data/plugins
+
+marvel.agent.enabled: false
