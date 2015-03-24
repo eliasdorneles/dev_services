@@ -1,0 +1,6 @@
+ftpd:
+    image: stilliard/pure-ftpd
+    ports:
+        - "2121:21"
+    # volumes:
+    #     - ./data:/data
