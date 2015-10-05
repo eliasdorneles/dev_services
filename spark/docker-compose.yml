@@ -1,0 +1,5 @@
+spark:
+    image:
+        sequenceiq/spark:1.3.0
+    command:
+        /bin/bash
