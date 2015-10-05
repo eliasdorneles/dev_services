@@ -1,0 +1,16 @@
+# NOTE: needs docker-compose 1.5+
+zookeeper:
+  image: wurstmeister/zookeeper
+  ports: 
+    - "2181:2181"
+kafka:
+  image: wurstmeister/kafka
+  ports:
+    - "9092"
+  links: 
+    - zookeeper:zk
+  environment:
+    KAFKA_ADVERTISED_HOST_NAME: $KAFKA_HOST
+    KAFKA_LOG_CLEANER_ENABLE: 'true'
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
