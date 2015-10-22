@@ -37,4 +37,5 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
     -e HOST=$KAFKA_HOST \
     -e ZK=$ZK \
     -i -t \
-    wurstmeister/kafka /bin/bash
+    wurstmeister/kafka /bin/bash \
+    -c 'exec /bin/bash --rcfile <(echo export PATH=\$KAFKA_HOME/bin:\$PATH)'
