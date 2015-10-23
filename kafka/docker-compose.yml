@@ -10,7 +10,7 @@ kafka:
   links: 
     - zookeeper:zk
   environment:
-    KAFKA_ADVERTISED_HOST_NAME: $KAFKA_HOST
+    KAFKA_ADVERTISED_HOST_NAME: "${KAFKA_HOST}"
     KAFKA_LOG_CLEANER_ENABLE: 'true'
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock

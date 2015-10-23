@@ -1,5 +1,9 @@
 # Kafka playground
 
+**NOTE:** This only works with docker-compose 1.5.0+, since it needs the ability to
+expand environment variables
+
+
 To start a cluster with two nodes:
 
     ./start-cluster.sh
